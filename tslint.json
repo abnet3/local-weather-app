@@ -7,7 +7,8 @@
   ],
   "rules": {
     "prettier": true,
-    "no-unused-declaration": true
+    "no-unused-declaration": true,
+    "no-console": false
   },
   "quotemark": [true, "single", "avoid-escape"],
   "semicolon": [true, "never"],

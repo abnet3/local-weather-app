@@ -72,7 +72,7 @@ describe('CurrentWeatherComponent', () => {
     fixture.detectChanges() // triggers ngOnInit()
     // Assert
     expect(component.current).toBeDefined()
-    expect(component.current.city).toEqual('Bethesda')
+    expect(component.current.city).toEqual('Bethesdpa')
     expect(component.current.temperature).toEqual(280.32)
     // Assert on DOM
     const debugEl = fixture.debugElement

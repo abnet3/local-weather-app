@@ -5,11 +5,12 @@ import { environment } from 'src/environments/environment';
 
 import { ICurrentWeather } from './../interfaces';
 import { ICurrentWeatherData } from './icurrent-weather-data';
+import { IWeatherService } from './IWeatherService';
 
 @Injectable({
   providedIn: 'root'
 })
-export class WeatherService {
+export class WeatherService implements IWeatherService {
 
   constructor(private httpClient: HttpClient) { }
 
@@ -17,7 +18,7 @@ export class WeatherService {
 
     const uriParams = new HttpParams()
       .set('q', `${city}, ${country}`)
-      .set('appid', environment.appId);
+      .set('appid', environment?.appId);
 
     return this.httpClient
       .get<ICurrentWeatherData>(

@@ -1,5 +1,7 @@
 version: 2.1
 jobs:
+ # running commands on a basic image
+  Hello-World:
  build:
  docker:
  - image: circleci/node:lts-browsers
